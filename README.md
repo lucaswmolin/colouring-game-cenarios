@@ -1,4 +1,4 @@
-Solução que escrevi em Python e C# para o problema 1907 da plataforma URI Online Judge: 
+Solução que escrevi em Python e C#, como tarefa de aula da disciplina Teoria dos Grafos, para o problema 1907 da plataforma URI Online Judge: 
 
 https://www.urionlinejudge.com.br/judge/en/problems/view/1907
 
