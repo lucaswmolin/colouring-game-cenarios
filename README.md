@@ -2,9 +2,6 @@ Solução que escrevi em C#, C/C++ e Python, como tarefa de aula da disciplina T
 
 https://www.urionlinejudge.com.br/judge/en/problems/view/1907
 
-Infelizmente, para Python o tempo de execução na validação da plataforma ainda excede o limite de 2 segundos.
-Porém, obtive sucesso em C# com 0.084s e em C/C++ com 0.000s.
-
 C#
 ![image](https://user-images.githubusercontent.com/28737900/131203434-d48652d7-8c6d-4cb6-a3cd-7594d94a85f0.png)
 
