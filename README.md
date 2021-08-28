@@ -12,4 +12,4 @@ C
 
 Python
 ![image](https://user-images.githubusercontent.com/28737900/131203406-73136c80-e4c5-4ec4-933b-c6b500cd2d26.png)
-![image](https://user-images.githubusercontent.com/28737900/131204093-87517b45-1a07-417a-9582-7c1a1b24eb93.png)
+![image](https://user-images.githubusercontent.com/28737900/131204128-d6205d6f-85a4-4c82-91e1-7d22dc093c01.png)
