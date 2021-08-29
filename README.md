@@ -2,6 +2,10 @@ Solução que escrevi em C#, C e Python, como tarefa de aula da disciplina Teori
 
 https://www.urionlinejudge.com.br/judge/en/problems/view/1907
 
+Lembre-se: conforme os Termos & Condições de Uso da plataforma, o uso de códigos-fonte de terceiros implicará na desativação da sua conta.
+
+https://www.urionlinejudge.com.br/judge/en/terms-and-conditions
+
 C#
 ![image](https://user-images.githubusercontent.com/28737900/131203434-d48652d7-8c6d-4cb6-a3cd-7594d94a85f0.png)
 ![image](https://user-images.githubusercontent.com/28737900/131203744-18ef8068-57ca-45cc-80bf-9789ea52401f.png)
