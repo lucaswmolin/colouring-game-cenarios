@@ -6,10 +6,10 @@ namespace uri1907
     class Program
     {
         static char[,] imagem = null;
-        static int[] queueX = new int[1024 * 1024];
-        static int[] queueY = new int[1024 * 1024];
+        static short[] queueX = new short[1048576];
+        static short[] queueY = new short[1048576];
 
-        static void ColorirImagem(int x, int y, int n, int m, char cor)
+        static void ColorirImagem(short x, short y, short n, short m, char cor)
         {
             int pf = 1;
             int tf = 0;
@@ -24,61 +24,68 @@ namespace uri1907
 
                 imagem[x, y] = cor;
 
-                if (x - 1 > -1 && x - 1 < n)
+                x--;
+                if (x > -1 && x < n)
                 {
-                    if (imagem[x - 1, y] == '.')
-                    {
-                        queueX[pf] = x - 1;
-                        queueY[pf++] = y;
-                        imagem[x - 1, y] = cor;
-                    }
-                }
-
-                if (y - 1 > -1 && y - 1 < m)
-                {
-                    if (imagem[x, y - 1] == '.')
+                    if (imagem[x, y] == '.')
                     {
                         queueX[pf] = x;
-                        queueY[pf++] = y - 1;
-                        imagem[x, y - 1] = cor;
-                    }
-                }
-
-                if (x + 1 > -1 && x + 1 < n)
-                {
-                    if (imagem[x + 1, y] == '.')
-                    {
-                        queueX[pf] = x + 1;
                         queueY[pf++] = y;
-                        imagem[x + 1, y] = cor;
+                        imagem[x, y] = cor;
                     }
                 }
 
-                if (y + 1 > -1 && y + 1 < m)
+                x += 2;
+
+                if (x > -1 && x < n)
                 {
-                    if (imagem[x, y + 1] == '.')
+                    if (imagem[x, y] == '.')
                     {
                         queueX[pf] = x;
-                        queueY[pf++] = y + 1;
-                        imagem[x, y + 1] = cor;
+                        queueY[pf++] = y;
+                        imagem[x, y] = cor;
+                    }
+                }
+                x--;
+
+                y--;
+                if (y > -1 && y < m)
+                {
+                    if (imagem[x, y] == '.')
+                    {
+                        queueX[pf] = x;
+                        queueY[pf++] = y;
+                        imagem[x, y] = cor;
+                    }
+                }
+
+                y += 2;
+
+                if (y > -1 && y < m)
+                {
+                    if (imagem[x, y] == '.')
+                    {
+                        queueX[pf] = x;
+                        queueY[pf++] = y;
+                        imagem[x, y] = cor;
                     }
                 }
             }
         }
 
-        static int ProcessarImagem(int n, int m)
+        static int ProcessarImagem(short n, short m)
         {
             int cor = 0;
 
-            for (int i = 0; i < n; i++)
+            for (short i = 0; i < n; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (short j = 0; j < m; j++)
                 {
-                    if (imagem[i,j] == '.')
+                    if (imagem[i, j] == '.')
                     {
                         ColorirImagem(i, j, n, m, 'c');
 
-                        cor += 1;
+                        cor++;
                     }
                 }
             }
@@ -90,16 +97,16 @@ namespace uri1907
         {
             string[] linha_inicial = Console.ReadLine().Split(' ');
 
-            int n = Int32.Parse(linha_inicial[0]);
-            int m = Int32.Parse(linha_inicial[1]);
+            short n = (short) Int32.Parse(linha_inicial[0]);
+            short m = (short) Int32.Parse(linha_inicial[1]);
 
-            imagem = new char[n,m];
-            for (int i = 0; i < n; i++)
+            imagem = new char[n, m];
+            for (short i = 0; i < n; i++)
             {
                 var linha = Console.ReadLine().ToCharArray();
-                for (int j = 0; j < m; j++)
+                for (short j = 0; j < m; j++)
                 {
-                    imagem[i,j] = linha[j];
+                    imagem[i, j] = linha[j];
                 }
             }
 
