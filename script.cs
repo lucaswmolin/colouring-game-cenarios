@@ -9,7 +9,7 @@ namespace uri1907
         static short[] queueX = new short[1048576];
         static short[] queueY = new short[1048576];
 
-        static void ColorirImagem(short x, short y, short n, short m, char cor)
+        static void ColorirImagem(short x, short y, short n, short m)
         {
             int pf = 1;
             int tf = 0;
@@ -22,7 +22,7 @@ namespace uri1907
                 x = queueX[tf];
                 y = queueY[tf++];
 
-                imagem[x, y] = cor;
+                imagem[x, y] = 'o';
 
                 x--;
                 if (x > -1 && x < n)
@@ -31,7 +31,7 @@ namespace uri1907
                     {
                         queueX[pf] = x;
                         queueY[pf++] = y;
-                        imagem[x, y] = cor;
+                        imagem[x, y] = 'o';
                     }
                 }
 
@@ -43,7 +43,7 @@ namespace uri1907
                     {
                         queueX[pf] = x;
                         queueY[pf++] = y;
-                        imagem[x, y] = cor;
+                        imagem[x, y] = 'o';
                     }
                 }
                 x--;
@@ -55,7 +55,7 @@ namespace uri1907
                     {
                         queueX[pf] = x;
                         queueY[pf++] = y;
-                        imagem[x, y] = cor;
+                        imagem[x, y] = 'o';
                     }
                 }
 
@@ -67,7 +67,7 @@ namespace uri1907
                     {
                         queueX[pf] = x;
                         queueY[pf++] = y;
-                        imagem[x, y] = cor;
+                        imagem[x, y] = 'o';
                     }
                 }
             }
@@ -75,7 +75,7 @@ namespace uri1907
 
         static int ProcessarImagem(short n, short m)
         {
-            int cor = 0;
+            int c = 0;
 
             for (short i = 0; i < n; i++)
             {
@@ -83,14 +83,14 @@ namespace uri1907
                 {
                     if (imagem[i, j] == '.')
                     {
-                        ColorirImagem(i, j, n, m, 'c');
+                        ColorirImagem(i, j, n, m);
 
-                        cor++;
+                        c++;
                     }
                 }
             }
 
-            return cor;
+            return c;
         }
 
         static void Main(string[] args)
@@ -103,7 +103,7 @@ namespace uri1907
             imagem = new char[n, m];
             for (short i = 0; i < n; i++)
             {
-                var linha = Console.ReadLine().ToCharArray();
+                char[] linha = Console.ReadLine().ToCharArray();
                 for (short j = 0; j < m; j++)
                 {
                     imagem[i, j] = linha[j];
