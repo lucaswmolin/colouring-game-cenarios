@@ -7,8 +7,8 @@ Lembre-se: conforme os Termos & Condições de Uso da plataforma, o uso de códi
 https://www.urionlinejudge.com.br/judge/en/terms-and-conditions
 
 C#
-![image](https://user-images.githubusercontent.com/28737900/131419024-973ac6df-81e5-47fc-8edb-d32015dfbce7.png)
-![image](https://user-images.githubusercontent.com/28737900/131419069-3097812d-8a9d-4250-9235-012688a7f77c.png)
+![image](https://user-images.githubusercontent.com/28737900/131424832-d203237f-652a-4d44-80bf-c0ef1eea98f3.png)
+![image](https://user-images.githubusercontent.com/28737900/131424889-3ad4810f-e8bd-48db-b42a-96cc0a33c7d4.png)
 
 C
 ![image](https://user-images.githubusercontent.com/28737900/131203415-d7dc9fd4-9da9-49bc-8133-f2c71e511512.png)
